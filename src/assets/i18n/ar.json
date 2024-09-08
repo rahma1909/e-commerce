@@ -1,0 +1,24 @@
+{
+  "mattooler": {
+    "Home": "الرئيسية",
+    "cart": "السلة",
+    "products": "المنتجات",
+    "categories": "الاقسام",
+
+    "brands": "علامات تجارية"},
+
+  "sidenav": {
+    "Home": "الرئيسية",
+    "cart": "السلة",
+    "products": "المنتجات",
+    "categories": "الاقسام",
+
+    "brands": "علامات تجارية"
+
+  },
+  "navblank":{
+  "lang": "ع"
+
+  }
+
+}

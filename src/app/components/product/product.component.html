@@ -1,0 +1,52 @@
+<section>
+  <h2 class="text-center">All Products </h2>
+  <input  [(ngModel)]="text" type="search" placeholder="search...."
+    class="form-control w-50 mx-auto my-2">
+  <div class="container-fluid my-5">
+    <div class="row g-3">
+      @for (product of productList| search : text ; track
+      product._id) {
+      <div class="col-md-2">
+        <div class="item border p-1 ">
+
+
+
+          <i routerLink="/wishlist" (click)="addPro(product._id)" #icon class="fa-regular fa-heart"></i>
+
+
+
+          <div [routerLink]='["/datails",product._id]'>
+            <img [src]="product.imageCover" class="w-100" [alt]="product.title">
+            <h3 class="small">{{product.category.name}}</h3>
+
+              <h4 class="h6">{{product.title}}</h4>
+
+
+
+
+            <div class="justify-content-between d-flex align-items-center">
+              <span class="small">{{product.price}} </span>
+              <div>
+                @for (star of [1,2,3,4,5].slice(0,product.ratingsAverage); track
+                $index) {
+                <span> <i class="fas fa-star text-warning"></i></span>
+                }
+                @if(product.ratingsAverage%1 !==0){
+                <span> <i
+                    class="fa-solid fa-star-half-stroke text-warning"></i></span>
+                }
+
+                <span>{{product.ratingsAverage}}</span>
+              </div>
+            </div>
+          </div>
+          <button class="btn btn-warning w-100  button"
+            (click)="addCart(product.id)">Add to Cart</button>
+        </div>
+
+      </div>
+      }
+    </div>
+  </div>
+</section>
+

@@ -1,0 +1,18 @@
+@if(specificCat){
+<section class="border shadow rounded-4 p-2">
+  <div class="d-flex justify-content-center align-items-center flex-column ">
+    <h1 class="text-center">{{specificCat.name}}</h1>
+    <div
+      class="d-flex justify-content-center align-items-center border flex-column shadow rounded-4 p-2 w-50 my-4">
+
+      <img [src]="specificCat.image" class="w-25 my-5 "
+        [alt]="specificCat.name">
+      <p> createdAt:{{specificCat.createdAt}}</p>
+      <p>{{specificCat.name}}</p>
+    </div>
+
+    <button [routerLink]="['/categories', categoryId , 'subcategories']" class="btn btn-main">view all</button>
+  </div>
+
+</section>
+}

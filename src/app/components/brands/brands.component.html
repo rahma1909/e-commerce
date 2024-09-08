@@ -1,0 +1,21 @@
+<section class="py-4" >
+  <h2 class="text-center text-main" >All Brands</h2>
+  <div class="row g-4 justify-content-center m-0">
+    @for (brand of brands; track brand._id) {
+      <div class="col-sm-6 col-md-4 col-lg-3 col-xl-2">
+        <div class="h-100 border border-4">
+          <img class="w-100 " [src]="brand.image" [alt]="brand.name">
+          <div class="d-flex justify-content-center align-items-center">
+            <button class="btn btn-main my-3" [routerLink]="['/branddetails', brand._id]">
+             view details
+              </button>
+          </div>
+
+</div>
+
+</div>
+    }
+
+  </div>
+
+</section>

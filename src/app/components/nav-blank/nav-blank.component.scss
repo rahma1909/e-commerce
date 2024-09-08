@@ -1,0 +1,120 @@
+.bg-body-tertiary {
+  background-color: #131921 !important;
+}
+.main-search {
+  width: 250% !important;
+}
+// .form-control
+// {
+//   padding: 10px !important;
+// }
+.btn-outline-success {
+  background-color: #f3a847 !important;
+  --bs-btn-border-color: #f3a847 !important;
+  --bs-btn-hover-bg: #f3a847 !important;
+  --bs-btn-color: white !important;
+}
+.btn:hover {
+  border-color: #f3a847 !important;
+}
+.navbar-nav {
+  --bs-nav-link-color: white !important;
+}
+.uk {
+  font-size: 10px;
+}
+
+.demo-section + .demo-section {
+  margin-top: 16px;
+}
+mat-sidenav-container {
+  height: calc(205vh - 115vh) !important;
+}
+mat-sidenav {
+  width: 280px;
+  background-color: #eee;
+}
+
+.right {
+  width: 8%;
+
+  margin: auto;
+}
+mat-toolbar {
+  background-color: #232f3e !important;
+}
+mat-toolbar-row {
+  margin-top: 10px !important;
+}
+.layer {
+  background-color: rgba($color: #000000, $alpha: 0.5) !important;
+}
+@media (min-width: 577px) and (max-width: 768px) {
+  .ul-non {
+    display: none !important;
+  }
+}
+@media (min-width: 769px) and (max-width: 992px) {
+  .main-search {
+    width: 110% !important;
+  }
+}
+@media (min-width: 993px) and (max-width: 1200px) {
+  .ul-non {
+    display: none !important;
+  }
+}
+@media (min-width: 1201px) and (max-width: 1400px) {
+  .main-search {
+    width: 210% !important;
+  }
+}
+
+// .mat-drawer-content
+// {
+//   height: 100vh !important;
+//   display:flex !important;
+//   z-index: -1 !important;
+//   background-color:white !important;
+
+// }
+
+
+mat-sidenav-content {
+  background-image: url("../../../assets/images/713Hfdg4mkL._SX3000_.jpg");
+  background-position: center center;
+  background-size: cover;
+}
+
+
+.mat-sidenav-content {
+  background-position: center center;
+  background-size: cover;
+}
+
+.main-content {
+  transform: translateY(50%);
+}
+a {
+  text-decoration: none;
+  cursor: pointer;
+}
+.small-div {
+  width: 90%;
+  height: 50px;
+  font-size: 15px;
+  background-color: #eee !important;
+}
+.sub-image{
+  width:250px !important;
+height:150px
+}
+.width-x {
+transform:translateX(-63%) !important
+}
+.width-y {
+  transform:translateX(30%) !important
+  }
+.countnum{
+  top:-15% !important
+}

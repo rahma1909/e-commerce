@@ -1,0 +1,26 @@
+<section>
+
+<div class="container border rounded-4 p-2 justify-content-center align-items-center my-5">
+  <div class="row g-3">
+
+    <h2 class="text-center my-3">subcategories</h2>
+    @for (item of subcategoryItems; track $index) {
+    <div class="col-md-4">
+      <div class="item bg-info shadow  rounded-4 text-center">
+
+        <p class="small">{{item.name}}</p>
+        <p class="small">{{item.createdAt}}</p>
+
+        <button [routerLink]="['/subcategories',subId]" class=" btn btn-main my-2">show more</button>
+      </div>
+
+    </div>
+
+
+    }
+
+  </div>
+</div>
+
+
+</section>

@@ -1,0 +1,148 @@
+<div class="d-flex justify-content-center align-items-center  ">
+
+  <section class=" border w-50  rounded rounded-2 p-3 d-flex justify-content-center align-items-center flex-column shadow">
+
+    <h2 class="text-main my-2 h4">forget password</h2>
+@if(step == 1){
+  <form [formGroup]="verifyemail" class="w-100" (ngSubmit)="verifyEmailSubmit()">
+
+    <label for="email">email</label>
+    <input [ngClass]="{
+      'is-valid': ! verifyemail.get('email')?.errors &&
+            ( verifyemail.get('email')?.touched|| verifyemail.get('email')?.dirty),
+      'is-invalid': verifyemail.get('email')?.errors &&
+            ( verifyemail.get('email')?.touched || verifyemail.get('email')?.dirty),
+
+
+              } "type="email" id="email" class="form-control my-3" formControlName="email">
+
+    @if (verifyemail.get('email')?.errors &&
+    ( verifyemail.get('email')?.touched ||
+    verifyemail.get('email')?.dirty)) {
+    <div class="alert alert-danger w-100">
+      @if(verifyemail.get('email')?.getError('required')){
+      <p class="m-0 mt-1">email is required</p>
+      }@else if(verifyemail.get('email')?.getError('email')){
+      <p class="m-0 mt-1">email should be correct</p>
+      }
+
+    </div>
+    }
+
+
+<div class="d-flex justify-content-center align-items-center">
+<button [disabled]="verifyemail.invalid" class="btn-main">verify email</button>
+
+</div>
+
+
+
+</form>
+}
+
+
+@if(step == 2){
+  <form [formGroup]="verifycode" class="w-100" (ngSubmit)="verifyCodeSubmit()">
+
+    <label for="code">code</label>
+    <input [ngClass]="{
+      'is-valid': ! verifycode.get('resetCode')?.errors &&
+            ( verifycode.get('resetCode')?.touched|| verifycode.get('resetCode')?.dirty),
+      'is-invalid': verifycode.get('resetCode')?.errors &&
+            ( verifycode.get('resetCode')?.touched || verifycode.get('resetCode')?.dirty),
+
+
+              } "type="code" id="text" class="form-control my-3" formControlName="resetcode">
+
+    @if (verifycode.get('resetCode')?.errors &&
+    ( verifycode.get('resetCode')?.touched ||
+    verifycode.get('resetCode')?.dirty)) {
+    <div class="alert alert-danger w-100">
+      @if(verifycode.get('resetCode')?.getError('required')){
+      <p class="m-0 mt-1">code is required</p>
+      }@else if(verifycode.get('resetCode')?.getError('resetCode')){
+      <p class="m-0 mt-1">code should be correct</p>
+      }
+
+    </div>
+    }
+
+
+<div class="d-flex justify-content-center align-items-center">
+<button [disabled]="verifycode.invalid" class="btn-main">verify code</button>
+
+</div>
+
+
+
+</form>
+}
+
+
+
+@if(step ==3){
+  <form [formGroup]="resetpass" class="w-100" (ngSubmit)="resetPassSubmit()">
+
+    <label for="email">email</label>
+    <input [ngClass]="{
+      'is-valid': ! resetpass.get('email')?.errors &&
+            ( resetpass.get('email')?.touched|| resetpass.get('email')?.dirty),
+      'is-invalid': resetpass.get('email')?.errors &&
+            ( resetpass.get('email')?.touched || resetpass.get('email')?.dirty),
+
+
+              } "type="email" id="email" class="form-control my-3" formControlName="email">
+
+    @if (resetpass.get('email')?.errors &&
+    ( resetpass.get('email')?.touched ||
+    resetpass.get('email')?.dirty)) {
+    <div class="alert alert-danger w-100">
+      @if(resetpass.get('email')?.getError('required')){
+      <p class="m-0 mt-1">email is required</p>
+      }@else if(resetpass.get('email')?.getError('email')){
+      <p class="m-0 mt-1">email should be correct</p>
+      }
+
+    </div>
+    }
+
+
+
+    <label for="newPassword">newPassword</label>
+    <input [ngClass]="{
+      'is-valid': ! resetpass.get('newPassword')?.errors &&
+            ( resetpass.get('newPassword')?.touched|| resetpass.get('newPassword')?.dirty),
+      'is-invalid': resetpass.get('newPassword')?.errors &&
+            ( resetpass.get('newPassword')?.touched || resetpass.get('newPassword')?.dirty),
+
+
+              } "type="newPassword" id="password" class="form-control my-3" formControlName="newPassword">
+
+    @if (resetpass.get('newPassword')?.errors &&
+    ( resetpass.get('newPassword')?.touched ||
+    resetpass.get('newPassword')?.dirty)) {
+    <div class="alert alert-danger w-100">
+      @if(resetpass.get('newPassword')?.getError('required')){
+      <p class="m-0 mt-1">newPassword is required</p>
+      }@else if(resetpass.get('newPassword')?.getError('newPassword')){
+      <p class="m-0 mt-1">newPassword should be correct</p>
+      }
+
+    </div>
+    }
+
+<div class="d-flex justify-content-center align-items-center">
+<button [disabled]="resetpass.invalid" class="btn-main">reset password</button>
+
+</div>
+
+
+
+</form>
+}
+
+
+
+</section>
+</div>
+

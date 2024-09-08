@@ -1,0 +1,78 @@
+<nav class="navbar navbar-dark  navbar-expand-lg bg-body-tertiary">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#"><img
+        src=".\assets\images\logo.79a1dd45e47017ffa5da.PNG" width="120px"
+        alt="logo"></a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+      data-bs-target="#navbarSupportedContent"
+      aria-controls="navbarSupportedContent" aria-expanded="false"
+      aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0 "
+        [class.width-y]="_TranslateService.currentLang == 'ar'">
+        <li class="nav-item mx-4">
+          <a class="nav-link">
+
+            <span class="uk text-secondary">Deliver to </span>
+            <br>
+            <i class="fa-solid fa-location-dot me-1"></i>
+            <span class="uk bolder">UK</span>
+          </a>
+
+        </li>
+        <li class="nav-item mt-3">
+          <form class="d-flex main-search" role="search">
+            <input class="form-control me-2" type="search" placeholder="Search"
+              aria-label="Search">
+            <button class="btn btn-outline-success "
+              type="submit">Search</button>
+          </form>
+        </li>
+
+      </ul>
+      <ul
+        [class.width-x]="_TranslateService.currentLang == 'ar'"
+        class="navbar-nav ms-auto mb-2 mb-lg-0 d-flex justify-content-around align-items-center ul-non">
+        <li class="nav-item mx-4 ">
+          <a class="nav-link account" (click)="_AuthService.logOut()">
+
+            <span class="uk  text-secondary">Hello, sign-out</span>
+            <br>
+
+            <span class="uk bolder">Account</span>
+          </a>
+
+        </li>
+        <li class="nav-item dropdown mt-2 "
+          [class.z-dropdown]="_TranslateService.currentLang == 'ar'">
+          <a class="nav-link dropdown-toggle " role="button"
+            data-bs-toggle="dropdown" aria-expanded="false">
+            <!-- <img src=".\assets\images\uk.jpg" width="50px" alt> -->
+            {{"navblank.lang" | translate}}
+          </a>
+          <ul class="dropdown-menu">
+            <li [class.bg-info]="_TranslateService.currentLang == 'en'"
+              (click)="change('en')"><a class="dropdown-item">EN</a></li>
+            <li [class.bg-info]="_TranslateService.currentLang == 'ar'"
+              (click)="change('ar')"><a class="dropdown-item">AR</a></li>
+
+          </ul>
+        </li>
+        <li class="nav-item mt-4 mx-5">
+          <a href class="nav-link">
+            <div class="demo-section custom-badge position-relative">
+              <i  class="fa-solid fs-1 fa-cart-shopping "></i>
+              <span
+                class="badge position-absolute countnum start-0 bg-info ">{{countNum()}}</span>
+            </div>
+          </a>
+
+        </li>
+      </ul>
+
+    </div>
+  </div>
+
+</nav>

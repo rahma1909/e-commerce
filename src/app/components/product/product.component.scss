@@ -1,0 +1,15 @@
+.item:hover{
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+.item{
+  transition: box-shadow 0.3s ease;
+  border-color: #131921 !important;
+  overflow: hidden;
+}
+.item .button{
+  transform: translateY(130%) !important;
+  transition: transform 0.3s ease;
+}
+.item:hover .button{
+  transform: translateY(0) !important;
+}

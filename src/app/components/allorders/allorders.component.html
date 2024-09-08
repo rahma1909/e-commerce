@@ -1,0 +1,21 @@
+<section class="my-5">
+  <h1 class="text-main text-center my-3">all orders</h1>
+  <div class="container ">
+
+  <div class="row g-2 justify-content-center align-items-center">
+
+    @for (item of cartItems.cartItems; track cartItems.id) {
+    <div class="col-md-3 border rounded-4 p-2 mx-2">
+      <h6>order {{cartItems.id}}</h6>
+      <img [src]="item.product.imageCover" class="w-100"
+        [alt]="item.product.title">
+      <p>{{item.product.title}} </p>
+      <p>{{item.product.category.name}} </p>
+    </div>
+    }
+  </div>
+
+
+
+  </div>
+</section>

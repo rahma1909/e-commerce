@@ -1,0 +1,21 @@
+
+<section  class="border shadow rounded-4 p-2">
+  @if( brandDetail._id ){
+    <div class="d-flex justify-content-center align-items-center flex-column ">
+
+      <div
+        class="d-flex justify-content-center align-items-center border flex-column shadow rounded-4 p-2 w-50 my-4">
+
+        <img [src]="brandDetail.image" class="w-25 my-5 "
+          [alt]="brandDetail.name">
+
+        <p>{{brandDetail.name}}</p>
+      </div>
+
+
+    </div>
+
+  }
+</section>
+
+

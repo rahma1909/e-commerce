@@ -1,0 +1,51 @@
+<section class="shadow rounded-4 p-4 my-5 w-75 mx-auto">
+  <div class="d-flex justify-content-between align-items-center">
+    <h1 class="h2 text-center">WishList</h1>
+
+  </div>
+
+
+  <div class="row mb-1 g-2">
+    @for(item of wishData ; track $index){
+    <div class="col-md-3">
+      <div class="item p-2 border border-4 rounded-4 shadow ">
+
+
+
+
+
+
+            <img [src]="item.imageCover" class="w-100"
+              [alt]="item.title">
+
+
+
+
+
+        <div
+          class="col-md-11 d-flex align-items-center justify-content-between">
+          <div>
+            <h3 class="h5">{{item.title}}</h3>
+            <p class="text-main m-0">price: {{item.price}} EGP</p>
+<!-- @for (id of productID; track $index) { -->
+  <button (click)="deletefromwish(item.id)" class="text-danger btn p-0"><i
+    class="fa-solid fa-trash"></i></button>
+<!-- } -->
+
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+  }
+  </div>
+
+
+</section>
+
+
+
+
+
+

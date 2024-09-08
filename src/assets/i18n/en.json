@@ -1,0 +1,27 @@
+{
+  "mattooler": {
+    "Home": "Home",
+    "cart": "cart",
+    "products": "products",
+    "categories": "categories",
+
+    "brands": "brands",
+    "wishlist": "wishlist"
+
+
+  }
+,
+"sidenav":{
+  "home":"home",
+  "cart":"cart",
+  "products":"products",
+  "categories":"categories",
+  "brands":"brands"
+
+
+},
+"navblank":{
+"lang": "lang"
+
+}
+}
