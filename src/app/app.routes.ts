@@ -85,11 +85,7 @@ export const routes: Routes = [
         loadComponent: () =>
           import('./components/subcat/subcat.component').then((m) => m.SubcatComponent),
       },
-      {
-        path: 'subcategories/:id',
-        loadComponent: () =>
-          import('./components/subsubcategory/subsubcategory.component').then((m) => m.SubsubcategoryComponent),
-      },
+    
       {
         path: 'wishlist',
         loadComponent: () =>

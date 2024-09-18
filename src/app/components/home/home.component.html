@@ -1,6 +1,4 @@
-
-
-<mat-toolbar #mattooler >
+<!-- <mat-toolbar #mattooler >
   <mat-toolbar-row>
     <div class="left">
       <button mat-button class="btn btn-white text-white"
@@ -40,10 +38,10 @@
     </div>
   </mat-toolbar-row>
 
-</mat-toolbar>
+</mat-toolbar> -->
 
-<!-- sidenav -->
-<mat-sidenav-container #matsidenav>
+
+<!-- <mat-sidenav-container #matsidenav>
   <mat-sidenav [(opened)]="opened" mode="side">
     <div (click)="growHeight()" class="my-4 p-2"> <a routerLink="/home"
         class="text-decoration-none text-black fw-bold ">{{"sidenav.home"|translate}}</a></div>
@@ -58,9 +56,7 @@
         class="text-decoration-none text-black fw-bold  ">{{"sidenav.categories"|translate}}
 
       </a>
-      <!-- @for (item of categoryitems; track $index) {
-    <a class="small">{{item.name}}</a>
-   } -->
+
     </div>
 
     <div (click)="growHeight()" class="mb-4 p-2"> <a
@@ -122,8 +118,8 @@
 
   </mat-sidenav-content>
 
-</mat-sidenav-container>
-<!-- categories -->
+</mat-sidenav-container> -->
+categories
 <section>
   <h2 class="my-2">popular categories</h2>
   <owl-carousel-o [options]="customOptions">
@@ -154,7 +150,7 @@
 
 
 <!-- @for (id of productID; track $index) { -->
-  <i routerLink="/wishlist"  #icon  (click)="addPro(product.id)" class="fa-regular fa-heart " [ngClass]="{'active-heart': wishListData.includes(product.id)}"></i>
+  <i   #icon  (click)="addPro(product.id)" class="fa-regular fa-heart " [ngClass]="{'active-heart': wishListData.includes(product.id)}"></i>
 <!-- } -->
 
 

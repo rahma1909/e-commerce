@@ -7,7 +7,16 @@
       <div class="row align-items-center border p-2 shadow">
         <div class="col-md-3">
 
-          <img [src]="specificProduct.imageCover" class="w-100" [alt]="specificProduct.title">
+          <i   #icon  (click)="addPro(sspecificProduct.id)" class="fa-regular fa-heart " [ngClass]="{'active-heart':  wishListDataa.includes(sspecificProduct.id)}"></i>
+          <owl-carousel-o [options]="customOptions">
+            @for (img of sspecificProduct.images; track $index) {
+              <ng-template carouselSlide >
+                <img [src]="img" class="w-100"
+                [alt]="specificProduct.title">
+
+              </ng-template>
+            }
+          </owl-carousel-o>
         </div>
         <div class="col-md-9">
           <h3>{{specificProduct.title}}</h3>

@@ -3,7 +3,7 @@ import { WishlistService } from '../../core/services/wishlist.service';
 import { ToastrService } from 'ngx-toastr';
 import { Iwish } from '../../core/interfaces/iwish';
 import { CarouselModule, OwlOptions } from 'ngx-owl-carousel-o';
-import { NgFor } from '@angular/common';
+import { NgClass, NgFor } from '@angular/common';
 import { CartService } from '../../core/services/cart.service';
 import { ProductsService } from '../../core/services/products.service';
 import { Iproduct } from '../../core/interfaces/iproduct';
@@ -11,7 +11,7 @@ import { RouterLink } from '@angular/router';
 @Component({
   selector: 'app-wishlist',
   standalone: true,
-  imports: [CarouselModule, NgFor,RouterLink],
+  imports: [CarouselModule, NgFor,RouterLink,NgClass],
 
   templateUrl: './wishlist.component.html',
   styleUrl: './wishlist.component.scss',
@@ -22,7 +22,7 @@ export class WishlistComponent {
 
 
   wishData: Iwish[] = [];
-
+  wishListData: Iwish = {} as Iwish
   productID:string=''
 
   customOptions: OwlOptions = {
@@ -63,6 +63,7 @@ export class WishlistComponent {
     this._WishlistService.removeProductFromWish(id).subscribe({
       next: (res) => {
         console.log(res);
+        this.wishListData=res.data
         // Update wishData by filtering out the deleted product
         this.wishData = this.wishData.filter(item => item.id !== id);
         this._ToastrService.success('Product removed from wishlist');
@@ -75,17 +76,5 @@ export class WishlistComponent {
   }
 
 
-//   addPro(id:string):void{
-//     this._WishlistService.addProductToWish(id).subscribe({
-//       next: (response) => {
-
-//         this.productID= response.data;
-//         this._ToastrService.success(response.message)
-
-// console.log( this.productID);
-
-//       }
-//     })
-//   }
 
 }

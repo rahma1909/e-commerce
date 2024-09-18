@@ -5,18 +5,29 @@
   </div>
 
 
-  <div class="row mb-1 g-2">
+  <div class="row mb-1 g-3">
     @for(item of wishData ; track $index){
-    <div class="col-md-3">
+    <div class="col-md-3 h-50">
+
       <div class="item p-2 border border-4 rounded-4 shadow ">
+        <i (click)="deletefromwish(item.id)"   class="fa-regular fa-heart " [class]="'active-heart'" ></i>
+
+
+        <owl-carousel-o [options]="customOptions">
+@for (img of wishData[$index].images; track $index) {
+  <ng-template carouselSlide >
+    <img [src]="'https://ecommerce.routemisr.com/Route-Academy-products/'+img" class="w-100"
+    [alt]="item.title">
+
+  </ng-template>
+}
 
 
 
 
+        </owl-carousel-o>
 
 
-            <img [src]="item.imageCover" class="w-100"
-              [alt]="item.title">
 
 
 
