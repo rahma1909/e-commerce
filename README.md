@@ -1,5 +1,5 @@
 
-🛒 Amazon E-commerce
+## 1. 🛒 Amazon E-commerce
 **GitHub:** [https://github.com/rahma1909/e-commerce](https://github.com/rahma1909/e-commerce)
 
 A responsive e-commerce platform showcasing various product categories with smooth navigation and an intuitive user interface. Integrated the **RouteEcommerce API** to dynamically manage and display product data.
