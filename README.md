@@ -2,45 +2,18 @@
 ## 1. 🛒 Amazon E-commerce
 **GitHub:** [https://github.com/rahma1909/e-commerce](https://github.com/rahma1909/e-commerce)
 
-A responsive e-commerce platform showcasing various product categories with smooth navigation and an intuitive user interface. Integrated the **RouteEcommerce API** to dynamically manage and display product data.
+A fully responsive **e-commerce website** that showcases various product categories with smooth navigation and an intuitive user interface. The project focuses on creating a seamless shopping experience while demonstrating dynamic web development skills.  
 
-**Key Features:**
-- Dynamic routing
-- Angular 17 & TypeScript
-- Signals for reactive state management
-- Interceptors for API requests
-- Responsive and clean UI with Bootstrap
+**Project Highlights:**
+- Integrated the **RouteEcommerce API** to dynamically fetch and display product data, including images, prices, and stock status.  
+- Implemented **dynamic routing** for product pages and category navigation.  
+- Used **Angular 17 signals** for reactive state management to handle user interactions and cart updates in real-time.  
+- Built **TypeScript-based components** with reusable UI elements to maintain clean and modular code.  
+- Applied **HTTP interceptors** to handle API requests, including authentication and error handling.  
+- Ensured **responsive design** using Bootstrap, providing a smooth experience on desktop and mobile devices.  
 
----
-
-## 2. 🌤️ Weather App
-**GitHub:** [https://github.com/rahma1909/weather](https://github.com/rahma1909/weather)
-
-A weather application that displays **real-time weather information** based on user input location. Integrated with a public weather API.
-
-**Key Features:**
-- HTML, CSS, JavaScript
-- Bootstrap for responsive design
-- RESTful API integration
-- Real-time data display
-
----
-
-## 3. 🍔 Food Website
-**GitHub:** [https://github.com/rahma1909/food-w](https://github.com/rahma1909/food-w)
-
-A dynamic food website with interactive navigation and data presentation. Built to demonstrate **Angular 17 capabilities** and reusable component design.
-
-**Key Features:**
-- Dynamic Routing
-- Data Binding
-- Reusable Components
-- TypeScript & Angular 17
-
----
-
-## 4. 🏢 Company Management System
-**GitHub:** [https://github.com/rahma1909/Company_Mvc_Project](https://github.com/rahma1909/Company_Mvc_Project)  
-**Live Demo:** [http://company-mvc11.runasp.net/](http://company-mvc11.runasp.net/)
-
-A backend .NET MVC project for managing company operations with **secure role-based access**. Allow
+**Key Features:**  
+- Product listing and details pages  
+- Shopping cart functionality  
+- Dynamic data fetching and state management  
+- Responsive UI design  
